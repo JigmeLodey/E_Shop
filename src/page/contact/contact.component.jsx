@@ -1,5 +1,6 @@
 import React from 'react';
 import {Formik} from "formik";
+import axios from 'axios';
 import {ContactContainer, ContactContain, ContactTitle, ButtonsBarContainer, Error} from "./contact.style";
 import FormInput from "../../share/form/form.component";
 import CustomButton from "../../share/button/button.component";
@@ -18,7 +19,9 @@ const Contact = () => {
                 <ContactTitle>
                     Contact Us
                 </ContactTitle>
-                <Formik initialValues={initialValue} validationSchema={ContactSchema} onSubmit={(value) => console.log(value) }>
+                <Formik initialValues={initialValue} validationSchema={ContactSchema} onSubmit={(value) => axios.post('https://jsonplaceholder.typicode.com/posts', {value}).then(res => {
+                    console.log(res)
+                })}>
                         {({values, handleChange, handleBlur, handleSubmit, errors, touched}) => (
                             <>
                                 <FormInput
