@@ -1,10 +1,16 @@
 import React from 'react'
-import {GroupContainer, FormInputContainer, FormInputLabel} from "./form.style";
+import {GroupContainer, FormInputContainer, FormInputLabel, Textarea} from "./form.style";
 
-const FormInput = ({handleChane, label, ...props}) => {
+const FormInput = ({handleChane, textarea, label, ...props}) => {
     return(
     <GroupContainer>
-        <FormInputContainer onChange={handleChane}{...props}/>
+        {
+            textarea ? (
+                <Textarea onChange={handleChane}{...props}/>
+            ): (
+                <FormInputContainer onChange={handleChane}{...props}/>
+            )
+        }
         {
             label? (
                 <FormInputLabel className={props.value.length ? 'shrink' : ''}>

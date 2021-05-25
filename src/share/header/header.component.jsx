@@ -10,7 +10,7 @@ export const Header = () => (
         <OptionsContainer>
             <OptionLink to='/'>HOME</OptionLink>
             <OptionLink to='/shop'>SHOP</OptionLink>
-            <OptionLink to='/shop'>CONTACT</OptionLink>
+            <OptionLink to='/contact'>CONTACT</OptionLink>
             <OptionLink  to='/auth'>LOGIN</OptionLink>
 
         </OptionsContainer>

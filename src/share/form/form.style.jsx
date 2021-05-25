@@ -36,6 +36,26 @@ export const FormInputContainer = styled.input`
     ${shrinkLabelStyles}
   }
 `;
+export const Textarea = styled.textarea`
+  background: none;
+  background-color: white;
+  color: ${subColor};
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  height: 100px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid ${subColor};
+  margin: 1px 0;
+  &:focus {
+    outline: none;
+  }
+  &:focus ~ label {
+    ${shrinkLabelStyles}
+  }
+`;
 
 export const FormInputLabel = styled.label`
   color: ${subColor};
